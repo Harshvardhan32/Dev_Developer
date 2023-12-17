@@ -32,7 +32,7 @@ const Header = () => {
         <div className='w-screen bg-[#131921]'>
 
             {/* upper header */}
-            <div className="w-11/12 mx-auto">
+            <div className="w-11/12 mx-auto relative z-50">
                 <div className="w-full flex flex-row gap-5 items-center justify-between py-4">
 
                     {/* Main Logo */}
@@ -88,7 +88,7 @@ const Header = () => {
 
                 {/* mobile menu */}
                 <div className='hidden max-[1200px]:block'>
-                    <div className='absolute right-0 top-[71px] pl-20'>
+                    <div className='absolute -right-4 top-[71px] pl-20'>
                         {
                             mobileMenu &&
                             <div className='bg-[#131921] text-white flex flex-col gap-y-5 pl-10 pr-10 pt-5 pb-10 mt-2 mr-2 rounded-lg'>
@@ -136,11 +136,11 @@ const Header = () => {
 
             </div>
 
-            <div className='relative hidden max-[1200px]:block'>
-                <div className='absolute bg-[#232f3e] py-5 mt-2 ml-2 rounded-lg left-0'>
+            <div className='hidden max-[1200px]:block'>
+                <div className='absolute left-0 z-50'>
                     {
                         showMenu &&
-                        <div className='flex flex-col gap-4 justify-start text-white uppercase pl-10 pr-10'>
+                        <div className='bg-[#232f3e] py-5 mt-2 ml-2 rounded-lg flex flex-col gap-4 justify-start text-white uppercase pl-10 pr-10'>
                             <NavLink to='/' onClick={menuHandler}>Home</NavLink>
                             <NavLink to='/store' onClick={menuHandler}>Our Store</NavLink>
                             <NavLink to='/blogs' onClick={menuHandler}>Blogs</NavLink>

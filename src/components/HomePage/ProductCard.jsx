@@ -1,15 +1,17 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import ReactStars from "react-rating-stars-component";
 import Compare from '../../images/prodcompare.svg';
 import Wishlist from '../../images/wish.svg';
 
 const ProductCard = ({ image, brand, heading, price }) => {
 
+    const navigate = useNavigate();
+
     heading = heading.length > 20 ? `${heading.slice(0, 20)}...` : heading;
 
     return (
-        <Link to='/store/product/:id' className="relative flex flex-col justify-between gap-6 shadow-xl bg-white w-[240px] min-w-[240px] rounded-md p-5">
+        <div onClick={() => navigate('/store/product/:id')} className="relative flex flex-col justify-between gap-6 shadow-xl bg-white w-[240px] min-w-[240px] rounded-md p-5">
             <div className='absolute flex flex-col gap-4 right-5 group-hover:block hover:cursor-pointer'>
                 <Link className='p-1 rounded-full hover:bg-gray-400'>
                     <img src={Wishlist} alt="wishlist" />
@@ -35,7 +37,7 @@ const ProductCard = ({ image, brand, heading, price }) => {
                 />
                 <p className='text-sm text-gray-600 pb-4'>{price}</p>
             </div>
-        </Link>
+        </div>
     );
 };
 export default ProductCard;

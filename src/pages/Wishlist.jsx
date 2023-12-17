@@ -12,7 +12,7 @@ const Wishlist = () => {
 
             <div className='w-11/12 mx-auto py-8'>
                 <div className='flex flex-row flex-wrap gap-2'>
-                    <div className='bg-white relative flex flex-col gap-4 justify-between rounded-md w-full max-w-[280px] p-4'>
+                    <div className='bg-white relative z-0 flex flex-col gap-4 justify-between rounded-md w-full max-w-[280px] p-4'>
                         <div className='w-full mx-auto pb-5'>
                             <img src={HeadphoneImg} alt="" />
                         </div>

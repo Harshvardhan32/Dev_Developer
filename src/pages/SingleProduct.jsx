@@ -7,7 +7,7 @@ import PopularProduct from '../components/PopularProduct';
 const SingleProduct = () => {
 
     // const [orderedProduct, setOrderedProduct] = useState(true);
-    const [showWriteReview, setShowWriteReview] = useState(true);
+    const [showWriteReview, setShowWriteReview] = useState(false);
 
     const commentShowHandler = () => {
         if (showWriteReview === true) {
